@@ -10,6 +10,12 @@
             <origin xyz="0 0 0" rpy="0 0 1.57075"/>
             <material name="blue"/>
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/imu.stl" scale="1 1 1"  />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 1.57075"/>
+        </collision>
     </link>
 
     <joint name="base_to_imu" type="fixed">

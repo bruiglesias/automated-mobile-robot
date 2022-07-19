@@ -10,6 +10,22 @@
             </geometry>
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/chassis.stl" scale="1 1 1" />
+            </geometry>
+            <surface>
+                <friction>
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
 
         <!-- ==== FRONT LEFT CASTER WHEEL ==== -->
         <visual>
@@ -19,7 +35,23 @@
             <origin xyz="0.410295 0.24 -0.112536" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
-
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl" scale="1 1 1" />
+            </geometry>
+            <surface>
+                <friction>
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
+            <origin xyz="0.410295 0.24 -0.112536" rpy="0 0 0"/>
+        </collision>
+        
         <!-- ==== FRONT RIGHT CASTER WHEEL ==== -->
         <visual>
             <geometry>
@@ -27,7 +59,23 @@
              </geometry>
             <origin xyz="0.410295 -0.24 -0.112536" rpy="0 0 0"/>
             <material name="blue"/>
-        </visual>    
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl"  scale="1 1 1" />
+            </geometry>
+            <surface>
+                <friction>
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
+            <origin xyz="0.410295 -0.24 -0.112536" rpy="0 0 0"/>
+        </collision>       
 
         <!-- ==== BACK LEFT CASTER WHEEL ==== -->
         <visual>
@@ -37,6 +85,22 @@
             <origin xyz="-0.410295 0.24 -0.112536" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl"  scale="1 1 1" />
+            </geometry>
+            <surface>
+                <friction>
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
+            <origin xyz="-0.410295 0.24 -0.112536" rpy="0 0 0"/>
+        </collision>
 
         <!-- ==== BACK RIGHT CASTER WHEEL ==== -->
         <visual>
@@ -46,5 +110,21 @@
             <origin xyz="-0.410295 -0.24 -0.112536" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl"  scale="1 1 1" />
+            </geometry>
+            <surface>
+                <friction>
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
+            <origin xyz="-0.410295 -0.24 -0.112536" rpy="0 0 0"/>
+        </collision>
     </link>
 </robot>

@@ -8,8 +8,14 @@
                 <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
             </geometry>
             <origin xyz="0 0 -0.04" rpy="0 0 -0.785375"/>
-        <material name="blue"/>
+            <material name="blue"/>
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
+            </geometry>
+            <origin xyz="0 0 -0.04" rpy="0 0 -0.785375"/>
+        </collision>
     </link>
     <joint name="base_to_front_laser" type="fixed">
         <parent link="base_link"/>
@@ -27,6 +33,12 @@
             <origin xyz="0 0 -0.04" rpy="0 0 2.355"/>
           <material name="blue"/>
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
+            </geometry>
+            <origin xyz="0 0 -0.04" rpy="0 0 2.355"/>
+        </collision>
     </link>
     <joint name="base_to_back_laser" type="fixed">
         <parent link="base_link"/>

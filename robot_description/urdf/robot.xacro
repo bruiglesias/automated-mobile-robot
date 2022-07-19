@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <material name="blue">
+        <color rgba="0 0 0.8 1"/>
+    </material>
+
+    <pose>0 0 0 0 0 0</pose>
+
+    <xacro:include filename="$(find robot_description)/urdf/base_link.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/camera.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/lasers.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/wheels.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/imu.xacro" />
+
+</robot>

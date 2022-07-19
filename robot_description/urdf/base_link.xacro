@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- ==== BASE LINK ==== -->
+    <link name="base_link">
+        <pose>0 0 0 0 0 0</pose>
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/chassis.stl" scale="1 1 1" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+
+        <!-- ==== FRONT LEFT CASTER WHEEL ==== -->
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl" scale="1 1 1" />
+             </geometry>
+            <origin xyz="0.410295 0.24 -0.112536" rpy="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+
+        <!-- ==== FRONT RIGHT CASTER WHEEL ==== -->
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl"  scale="1 1 1" />
+             </geometry>
+            <origin xyz="0.410295 -0.24 -0.112536" rpy="0 0 0"/>
+            <material name="blue"/>
+        </visual>    
+
+        <!-- ==== BACK LEFT CASTER WHEEL ==== -->
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl"  scale="1 1 1" />
+             </geometry>
+            <origin xyz="-0.410295 0.24 -0.112536" rpy="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+
+        <!-- ==== BACK RIGHT CASTER WHEEL ==== -->
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/caster_wheel.stl"  scale="1 1 1" />
+             </geometry>
+            <origin xyz="-0.410295 -0.24 -0.112536" rpy="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+    </link>
+</robot>

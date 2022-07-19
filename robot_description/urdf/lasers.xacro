@@ -7,20 +7,24 @@
             <geometry>
                 <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 -0.785375"/>
+            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
                 <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 -0.785375"/>
+            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
         </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
     </link>
     <joint name="base_to_front_laser" type="fixed">
         <parent link="base_link"/>
         <child link="front_laser"/>
-        <origin xyz="0.463324 -0.251979 0.03" />
+        <origin xyz="0.463324 -0.251979 0.03" rpy="0 0 -0.785375"/>
     </joint>
 
 
@@ -30,20 +34,24 @@
             <geometry>
                 <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 2.355"/>
+            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
           <material name="blue"/>
         </visual>
         <collision>
             <geometry>
                 <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 2.355"/>
+            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
         </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
     </link>
     <joint name="base_to_back_laser" type="fixed">
         <parent link="base_link"/>
         <child link="back_laser"/>
-        <origin xyz="-0.454597 0.230597 0.03" />
+        <origin xyz="-0.454597 0.230597 0.03" rpy="0 0 2.355"/>
     </joint>
     
 </robot>

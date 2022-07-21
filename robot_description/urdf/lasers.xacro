@@ -5,16 +5,16 @@
    <link name="front_laser">
         <visual>
             <geometry>
-                <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
+                <mesh filename="package://robot_description/meshes/laser.stl" scale="0.8 0.8 0.8" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+            <origin xyz="0 0 -0.09" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
+                <mesh filename="package://robot_description/meshes/laser.stl" scale="0.8 0.8 0.8" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+            <origin xyz="0 0 -0.09" rpy="0 0 0"/>
         </collision>
         <inertial>
             <mass value="1"/>
@@ -24,7 +24,7 @@
     <joint name="base_to_front_laser" type="fixed">
         <parent link="base_link"/>
         <child link="front_laser"/>
-        <origin xyz="0.463324 -0.251979 0.03" rpy="0 0 -0.785375"/>
+        <origin xyz="0.475348 -0.26853 0.07" rpy="0 0 -0.785375"/>
     </joint>
 
 
@@ -32,16 +32,16 @@
     <link name="back_laser">
         <visual>
             <geometry>
-                <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
+                <mesh filename="package://robot_description/meshes/laser.stl" scale="0.8 0.8 0.8" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+            <origin xyz="0 0 -0.09" rpy="0 0 0"/>
           <material name="blue"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://robot_description/meshes/laser.stl" scale="1 1 1" />
+                <mesh filename="package://robot_description/meshes/laser.stl" scale="0.8 0.8 0.8" />
             </geometry>
-            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+            <origin xyz="0 0 -0.09" rpy="0 0 0"/>
         </collision>
         <inertial>
             <mass value="1"/>
@@ -51,7 +51,7 @@
     <joint name="base_to_back_laser" type="fixed">
         <parent link="base_link"/>
         <child link="back_laser"/>
-        <origin xyz="-0.454597 0.230597 0.03" rpy="0 0 2.355"/>
+        <origin xyz="-0.474597 0.240597 0.07" rpy="0 0 2.355"/>
     </joint>
     
 </robot>

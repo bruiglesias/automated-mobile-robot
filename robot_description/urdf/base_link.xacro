@@ -131,4 +131,5 @@
             <origin xyz="-0.410295 -0.24 -0.112536" rpy="0 0 0"/>
         </collision>
     </link>
+
 </robot>

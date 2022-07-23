@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Yellow</material>
+    </gazebo>
+
+    <gazebo reference="front_laser">
+        <material>Gazebo/Green</material>
+    </gazebo>
+    
+    <gazebo reference="back_laser">
+        <material>Gazebo/Green</material>
+    </gazebo>
+    
+    <gazebo reference="left_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    
+    <gazebo reference="right_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    
+    <gazebo reference="depth_camera">
+        <material>Gazebo/Green</material>
+    </gazebo>
+
+    <gazebo reference="depth_camera">
+        <material>Gazebo/Green</material>
+    </gazebo>
+
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+
+</robot>

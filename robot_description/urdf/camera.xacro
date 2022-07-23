@@ -1,22 +1,6 @@
 <?xml version="1.0"?>
 <robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <link name="front_realsense" />
-
-    <!--
-        The gazebo plugin aligns the depth data with the Z axis, with X=left and Y=up
-        ROS expects the depth data along the X axis, with Y=left and Z=up
-        This link only exists to give the gazebo plugin the correctly-oriented frame
-    -->
-    <link name="front_realsense_gazebo" />
-
-    <joint name="front_realsense_gazebo_joint" type="fixed">
-        <parent link="front_realsense"/>
-        <child link="front_realsense_gazebo"/>
-        <origin xyz="0.0 0 0" rpy="-1.5707963267948966 0 -1.5707963267948966"/>
-    </joint>
-
-    
     <!-- ==== CAMERA ==== -->
     <link name="depth_camera">
         <visual>
@@ -33,21 +17,38 @@
             <origin xyz="0 0 0" rpy="1.57075 0 1.57075"/>
         </collision>
         <inertial>
-            <mass value="0.5"/>
-            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+            <mass value="0.01"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01" />
         </inertial>
     </link>
-
     <joint name="base_to_camera" type="fixed">
         <parent link="base_link"/>
         <child link="depth_camera"/>
         <origin xyz="0.523916 -0.012133 -0.03674" />
     </joint>
 
+
+    <link name="front_realsense" />
+
     <joint type="fixed" name="front_realsense_joint">
         <origin xyz="0.025 0 0" rpy="0 0 0" />
         <parent link="depth_camera" />
         <child link="front_realsense" />
     </joint>
+
+    
+     <!--
+        The gazebo plugin aligns the depth data with the Z axis, with X=left and Y=up
+        ROS expects the depth data along the X axis, with Y=left and Z=up
+        This link only exists to give the gazebo plugin the correctly-oriented frame
+    -->
+    <link name="front_realsense_gazebo" />
+
+    <joint name="front_realsense_gazebo_joint" type="fixed">
+        <parent link="front_realsense"/>
+        <child link="front_realsense_gazebo"/>
+        <origin xyz="0.0 0 0" rpy="-1.5707963267948966 0 -1.5707963267948966"/>
+    </joint>
+
     
 </robot>
